@@ -1,32 +1,3 @@
-//! Set of questions --> array of objects
-questions = [
-    {
-        question: QUESTION1_TEXT,
-        options: [QUESTION1_ANSWER_OPTION1, QUESTION1_ANSWER_OPTION2, QUESTION1_ANSWER_OPTION3],
-        correctAnswer: QUESTION1_ANSWER_CORRECT
-    },
-    {
-        question: QUESTION2_TEXT,
-        options: [QUESTION2_ANSWER_OPTION1, QUESTION2_ANSWER_OPTION2, QUESTION2_ANSWER_OPTION3],
-        correctAnswer: QUESTION2_ANSWER_CORRECT
-    },
-    {
-        question: QUESTION1_TEXT,
-        options: [QUESTION3_ANSWER_OPTION1, QUESTION3_ANSWER_OPTION2, QUESTION3_ANSWER_OPTION3],
-        correctAnswer: QUESTION3_ANSWER_CORRECT
-    },
-    {
-        question: QUESTION1_TEXT,
-        options: [QUESTION4_ANSWER_OPTION1, QUESTION4_ANSWER_OPTION2, QUESTION4_ANSWER_OPTION3],
-        correctAnswer: QUESTION4_ANSWER_CORRECT
-    },
-    {
-        question: QUESTION1_TEXT,
-        options: [QUESTION5_ANSWER_OPTION1, QUESTION5_ANSWER_OPTION2, QUESTION5_ANSWER_OPTION3],
-        correctAnswer: QUESTION5_ANSWER_CORRECT
-    }
-
-]
 //! Each question needs the following:
 //! Question text
 QUESTION1_TEXT = `QUESTION1_TEXT`;
@@ -61,6 +32,37 @@ QUESTION2_ANSWER_CORRECT = `QUESTION2_ANSWER_CORRECT`;
 QUESTION3_ANSWER_CORRECT = `QUESTION3_ANSWER_CORRECT`;
 QUESTION4_ANSWER_CORRECT = `QUESTION4_ANSWER_CORRECT`;
 QUESTION5_ANSWER_CORRECT = `QUESTION5_ANSWER_CORRECT`;
+
+
+//! Set of questions --> array of objects
+questions = [
+    {
+        question: QUESTION1_TEXT,
+        options: [QUESTION1_ANSWER_OPTION1, QUESTION1_ANSWER_OPTION2, QUESTION1_ANSWER_OPTION3],
+        correctAnswer: QUESTION1_ANSWER_CORRECT
+    },
+    {
+        question: QUESTION2_TEXT,
+        options: [QUESTION2_ANSWER_OPTION1, QUESTION2_ANSWER_OPTION2, QUESTION2_ANSWER_OPTION3],
+        correctAnswer: QUESTION2_ANSWER_CORRECT
+    },
+    {
+        question: QUESTION1_TEXT,
+        options: [QUESTION3_ANSWER_OPTION1, QUESTION3_ANSWER_OPTION2, QUESTION3_ANSWER_OPTION3],
+        correctAnswer: QUESTION3_ANSWER_CORRECT
+    },
+    {
+        question: QUESTION1_TEXT,
+        options: [QUESTION4_ANSWER_OPTION1, QUESTION4_ANSWER_OPTION2, QUESTION4_ANSWER_OPTION3],
+        correctAnswer: QUESTION4_ANSWER_CORRECT
+    },
+    {
+        question: QUESTION1_TEXT,
+        options: [QUESTION5_ANSWER_OPTION1, QUESTION5_ANSWER_OPTION2, QUESTION5_ANSWER_OPTION3],
+        correctAnswer: QUESTION5_ANSWER_CORRECT
+    }
+
+]
 
 // Landing page:
 // Explanation of the quiz
