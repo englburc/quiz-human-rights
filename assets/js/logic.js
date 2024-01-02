@@ -23,3 +23,40 @@ function startQuiz() {
 
 }
 
+function saveScore() {
+    const initials = document.getElementById('initials').value;
+
+    // Get existing scores from localStorage or initialize an empty array
+    const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+    // Add the current score and initials to the array
+    highscores.push({ score, initials });
+
+    // Sort the highscores array based on scores in descending order
+    highscores.sort((a, b) => b.score - a.score);
+
+    // Store the updated highscores array in localStorage
+    localStorage.setItem('highscores', JSON.stringify(highscores));
+
+    // Redirect to highscores page (assuming you have a highscores.html file)
+    window.location.href = 'highscores.html';
+}
+
+function saveScore() {
+    const initials = document.getElementById('initials').value;
+
+    // Get existing scores from localStorage or initialize an empty array
+    const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+    // Add the current score and initials to the array
+    highscores.push({ score, initials });
+
+    // Sort the highscores array based on scores in descending order
+    highscores.sort((a, b) => b.score - a.score);
+
+    // Store the updated highscores array in localStorage
+    localStorage.setItem('highscores', JSON.stringify(highscores));
+
+    // Redirect to highscores page (assuming you have a highscores.html file)
+    window.location.href = 'highscores.html';
+}
