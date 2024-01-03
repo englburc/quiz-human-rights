@@ -95,8 +95,8 @@ questions = [
 //! Form appears for user to enter their initials
 //! Display their score
 
-// User submits form
-// Initials and score get stored in local storage
-// User is taken to the high scores page
-// High scores are listed, sorted highest to lowest
+//! User submits form
+//! Initials and score get stored in local storage
+//! User is taken to the high scores page
+//! High scores are listed, sorted highest to lowest
 // User has option to take the quiz again
