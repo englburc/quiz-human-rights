@@ -10,6 +10,18 @@ const clearButton = document.getElementById('clear');
 startButton.addEventListener('click', startQuiz);
 submitButton.addEventListener('click', saveScore);
 
+function endQuiz() {
+    // stop the timer (replace with your specific timer logic)
+    // stopTimer();
+
+    // Hide questions, show end screen
+    document.getElementById('questions').classList.add('hide');
+    document.getElementById('end-screen').classList.remove('hide');
+
+    // Display final score
+    document.getElementById('final-score').textContent = score;
+}
+
 function startTimer() {
     // replace 'initialTime' with the initial time value in seconds
     let initialTime = 60;
@@ -27,7 +39,8 @@ function startTimer() {
         // Check if time has run out
         if (initialTime <= 0) {
             //end quiz
-            console.log(`end quiz`)
+            console.log(`end quiz`);
+            endQuiz();
         }
     }, 1000);
 }
@@ -49,6 +62,7 @@ function checkAnswer(selectedAnswer) {
     } else {
         //end quiz
         console.log(`end quiz`)
+        endQuiz()
     }
 }
 
@@ -69,7 +83,7 @@ function displayQuestion() {
 }
 
 function startQuiz() {
-    // Initialize variables or reset game state
+    // Initialise variables or reset game state
     currentQuestionIndex = 0;
     score = 0;
 
