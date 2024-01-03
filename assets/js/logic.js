@@ -8,7 +8,11 @@ const clearButton = document.getElementById('clear');
 
 // Event listeners
 startButton.addEventListener('click', startQuiz);
-submitButton.addEventListener('click', saveScore);
+submitButton.addEventListener('submit', function (e) {
+    // Prevents the form from submitting to server through browser
+    e.preventDefault();
+    saveScore();
+});
 
 function stopTimer() {
     // clear the interval to stop the countdown
