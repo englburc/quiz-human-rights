@@ -3,7 +3,7 @@ let score = 0;
 let timer;
 
 const startButton = document.getElementById('start');
-const submitButton = document.getElementById('submit');
+const submitButton = document.getElementById('end-screen');
 const clearButton = document.getElementById('clear');
 
 // Event listeners
