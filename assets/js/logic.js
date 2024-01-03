@@ -10,9 +10,14 @@ const clearButton = document.getElementById('clear');
 startButton.addEventListener('click', startQuiz);
 submitButton.addEventListener('click', saveScore);
 
+function stopTimer() {
+    // clear the interval to stop the countdown
+    clearInterval(timer);
+}
+
 function endQuiz() {
-    // stop the timer (replace with your specific timer logic)
-    // stopTimer();
+    // stop the timer
+    stopTimer();
 
     // Hide questions, show end screen
     document.getElementById('questions').classList.add('hide');
