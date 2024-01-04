@@ -15,10 +15,12 @@
 * - saving data in localStorage of the browser
 * - using JASON for holding the data in localStorage and parsing it to the String to be displayed and used or parsing it back to JASON object to save it in browser
 * - using eventListeners
+* - setting timeout for certain time length
 
 ##Further improvements
-* There can be an implementation on automating to load different questions into the template of the quiz to make it reusable. E.g. using a export of a questions from spreadsheet etc.
-* currently, there are template CONSTANT variables that can hold questions as Strings and the strings have to be replaced manually
+* There can be an implementation on automating loading mechanism for different questions into the template of the quiz to make it reusable. E.g. using a export of a questions from spreadsheet, or reading from a file etc.
+* Currently, there are template CONSTANT variables that can hold questions as Strings and the strings have to be replaced manually
+* - Code can be refactored to follow DRY concept 
 
 #Links:
 * To deployed site on Github

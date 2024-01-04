@@ -56,12 +56,38 @@ function startTimer() {
 
 function checkAnswer(selectedAnswer) {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-
+    //element of html used to tell user correct or incorrect answer
+    const feedbackContainer = document.getElementById('feedback');
+    //show feedback
+    feedbackContainer.classList.remove(`hide`);
     if (selectedAnswer === correctAnswer) {
+
         score++;
+
+        //to play sound
+        let audioEl = document.createElement('audio');
+        audioEl.setAttribute(`src`, 'assets/sfx/correct.wav')
+        audioEl.play();
+
+        feedbackContainer.textContent = "Correct!";
+        //feedback message disappears after 1 sec
+        setTimeout(() => {
+            feedbackContainer.classList.add(`hide`);
+        }, 1000);
     } else {
         // subtract time for incorrect answer 
         console.log(`incorrect answer`)
+
+        //to play sound - incorrect
+        let audioEl = document.createElement('audio');
+        audioEl.setAttribute(`src`, 'assets/sfx/incorrect.wav')
+        audioEl.play();
+
+        feedbackContainer.textContent = "Incorrect!";
+        //feedback message disappears after 1 sec
+        setTimeout(() => {
+            feedbackContainer.classList.add(`hide`);
+        }, 1000);
     }
 
     currentQuestionIndex++;
