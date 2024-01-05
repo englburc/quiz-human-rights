@@ -1,6 +1,8 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let timer;
+let initialTime = 60;
+
 
 const startButton = document.getElementById('start');
 const submitButton = document.getElementById('end-screen');
@@ -32,8 +34,7 @@ function endQuiz() {
 }
 
 function startTimer() {
-    // replace 'initialTime' with the initial time value in seconds
-    let initialTime = 60;
+
 
     // display the initial time
     document.getElementById('time').textContent = initialTime;
@@ -52,6 +53,17 @@ function startTimer() {
             endQuiz();
         }
     }, 1000);
+}
+
+function subtractTime(seconds) {
+    // let remainingTime = parseInt(document.getElementById('time').textContent, 10);
+    initialTime = initialTime - seconds;
+
+    // Ensure the remaining time is not negative
+    initialTime = Math.max(0, initialTime);
+
+    // Update the timer display
+    document.getElementById('time').textContent = initialTime;
 }
 
 function checkAnswer(selectedAnswer) {
@@ -76,14 +88,14 @@ function checkAnswer(selectedAnswer) {
         }, 1000);
     } else {
         // subtract time for incorrect answer 
-        console.log(`incorrect answer`)
+        subtractTime(10)
 
         //to play sound - incorrect
         let audioEl = document.createElement('audio');
         audioEl.setAttribute(`src`, 'assets/sfx/incorrect.wav')
         audioEl.play();
 
-        feedbackContainer.textContent = "Incorrect!";
+        feedbackContainer.textContent = "Incorrect! - 10 seconds lost";
         //feedback message disappears after 1 sec
         setTimeout(() => {
             feedbackContainer.classList.add(`hide`);
@@ -96,7 +108,6 @@ function checkAnswer(selectedAnswer) {
         displayQuestion();
     } else {
         //end quiz
-        console.log(`end quiz`)
         endQuiz()
     }
 }
