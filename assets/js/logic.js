@@ -49,7 +49,7 @@ function startTimer() {
         // Check if time has run out
         if (initialTime <= 0) {
             //end quiz
-            console.log(`end quiz`);
+
             endQuiz();
         }
     }, 1000);

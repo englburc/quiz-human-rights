@@ -86,7 +86,7 @@ questions = [
 //! Their choice is compared to the correct answer as stored in the question's object
 //! If correct, tell them
 //! If incorrect, tell them AND subtract time from the timer
-// Optional: play a sound for correct or incorrect
+//! Optional: play a sound for correct or incorrect
 //! Either way, the question disappears after a few seconds and the next question appears
 
 //! After the last question:
@@ -99,4 +99,4 @@ questions = [
 //! Initials and score get stored in local storage
 //! User is taken to the high scores page
 //! High scores are listed, sorted highest to lowest
-// User has option to take the quiz again
+//! User has option to take the quiz again
